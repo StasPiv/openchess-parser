@@ -47,10 +47,8 @@ class Parser
                 continue;
             }
 
-            $pgn .= PHP_EOL . $content;
+            file_put_contents('pgn.pgn', $content . PHP_EOL, FILE_APPEND);
         }
-
-        file_put_contents('pgn.pgn', $pgn);
 
     }
 }
